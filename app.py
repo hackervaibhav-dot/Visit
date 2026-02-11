@@ -213,13 +213,12 @@ def token_status(server):
     else:
         return jsonify({"error": "No tokens loaded for this server"}), 404
 
-if __name__ == "__main__":
-    print(f"🔑 Token Rotation System Activated")
-    print(f"🔑 Each request will use {TOKENS_PER_REQUEST} tokens")
-    print(f"🌐 API Endpoint: http://0.0.0.0:5000/visit?region=IND&uid=2343018450")
-    print(f"🔑 Server running on http://0.0.0.0:5000")
-    app.run(host="0.0.0.0", port=5070)
+# ===============================
+# MAIN ENTRY POINT
+# ===============================
 
+# Vercel serverless environment
+# Flask app is auto-detected
 
 # Credit @vaibhavff570
 # Join https://t.me/ffhelpgroup
